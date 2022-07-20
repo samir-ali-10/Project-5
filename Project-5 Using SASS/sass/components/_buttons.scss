@@ -1,0 +1,34 @@
+.main-btn {
+    background-color: rgba($redColor,.8);
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: .2s;
+    cursor: pointer;
+    &:hover {
+        background-color: $redColor;
+    }
+}
+
+.header {
+    .logo {
+        i {
+            position: absolute;
+            font-size: 25px;
+            top: 20px;
+            right: 15px;
+            background-color: $redColor;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: none;
+            @media #{$maxMobile} {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.slider {
+    blockquote {
+        font: {
+            size: 18px;
+            family: Tahoma, arial;
+            weight: bold;
+            style: italic;
+        }
+        color: $greyColor;
+        width: 80%;
+        text-align: center;
+        line-height: 1.7;
+        margin: 30px auto;
+    }
+    img {
+        max-width: 100%;
+    }
+    .bullets {
+        text-align: center;
+        li {
+            display: inline-block;
+            background-color: $greyColor;
+            border: 3px solid $greyColor;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .3s;
+            &.active,
+            &:hover {
+                border: 3px solid black;
+                background-color: white;
+            }
+        }
+    }
+}
+
+.services {
+    padding: 20px 0;
+    .service-cont {
+        @media #{$minMedium} {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+        }
+        .service-box {
+            padding-bottom: 15px;
+            @media #{$maxMobile} {
+                i {
+                    display: block;
+                    margin-bottom: 15px;
+                }
+            }
+            .title {
+                i {
+                    font-size: 30px;
+                    position: relative;
+                    padding-right: 10px;
+                    top: 4px;
+                }
+            }
+            p {
+                line-height: 1.5;
+                color: $greyColor;
+            }
+            a {
+                color: $redColor;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.our-players {
+    padding: 10px 0;
+    .players-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 10px;
+        text-align: center;
+        .player-box {
+            img {
+                max-width: 100%;
+                cursor: pointer;
+            }
+            .modal {
+                background-color: $greyColor;
+                padding: 40px;
+                border-radius: 5px;
+                border: none;
+                &::backdrop {
+                    background-color: black;
+                    opacity: 0.3;
+                }
+                i {
+                    position: absolute;
+                    top: 6px;
+                    right: 6px;
+                    background-color: red;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 45%;
+                    cursor: pointer;
+                }
+            }
+            .title {
+                color: $greyColor;
+                span {
+                    font-weight: bold;
+                    font-style: italic;
+                    color: black;
+                }
+            }
+            p {
+                color: $greyColor;
+                line-height: 1.5;
+            }
+            a {
+                color: $redColor;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.gallery {
+    padding: 10px 0;
+    .gallery-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        text-align: center;
+        .img-holder {
+            padding-bottom: 15px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: rgb(182, 182, 182);
+    padding: 15px 0;
+    .footer-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        text-align: center;
+        border-bottom: 1px solid black;
+        padding-bottom: 10px;
+        .photo {
+            width: 450px;
+            .img-box {
+                display: flex;
+                margin-bottom: 15px;
+                img {
+                    max-width: 100%;
+                }
+                .text {
+                    margin-left: 15px;
+                    text-align: start;
+                    h4 {
+                        margin-bottom: 10px;
+                        color: $redColor;
+                    }
+                    p {
+                        color: #777;
+                        line-height: 1.6;
+                        width: 70%;
+                    }
+                }
+                @media #{$maxMobile} {
+                    p {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        .info {
+            .info-cont {
+                ul {
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    li {
+                        margin-bottom: 5px;
+                        color: #777;
+                        &:nth-child(4) {
+                            margin-bottom: 20px;
+                        }
+                        span {
+                            color: $redColor;
+                        }
+                    }
+                }
+                .working {
+                    color: #777;
+                }
+                p {
+                    margin-bottom: 5px;
+                    color: #777;
+                }
+            }
+        }
+        .contact {
+            form {
+                display: flex;
+                flex-direction: column;
+                input[type="text"],
+                input[type="email"],
+                textarea {
+                    border: 1px solid #888;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border-radius: 6px;
+                    width: 100%;
+                    transition: .3s;
+                    &::placeholder {
+                        color: #888;
+                    }
+                    &:focus {
+                        outline: none;
+                        input[type="text"],
+                        input[type="email"],
+                        textarea::placeholder {
+                            display: none;
+                        }
+                    }
+                }
+                textarea {
+                    height: 140px;
+                }
+                input[type="submit"] {
+                    width: 130px;
+                }
+            }
+        }
+    }
+    .title {
+        color: #444;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    .copy-right {
+        color: #777;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
